@@ -5,8 +5,8 @@
     --bg-color: #e6eeef;
     --text-color: #333;
     --form-bg: #ffffff;
-    --accent-color: #28a745;
-    --accent-hover: #218838;
+    --accent-color: #007bff;
+    --accent-hover: #007bff;
     --link-color: #007bff;
     --table-header: #007bff;
     --table-stripe: #f7f9fa;
@@ -43,7 +43,7 @@ body {
 }
 
 .theme-toggle button {
-    font-size: 50px;
+    font-size: 40px;
     padding: 12px;
     background-color: transparent;
     color: var(--text-color);

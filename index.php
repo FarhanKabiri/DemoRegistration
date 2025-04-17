@@ -23,11 +23,11 @@
     <?php include "slots.php"; ?>
     <form action="submit.php" method="POST">
         ID: <input type="text" name="id" required pattern="\d{8}" placeholder="8-digit Student ID"><br>
-        First Name: <input type="text" name="first_name" required pattern="[A-Za-z]+" placeholder="Only letters allowed"><br>
-        Last Name: <input type="text" name="last_name" required pattern="[A-Za-z]+" placeholder="Only letters allowed"><br>
+        First Name: <input type="text" name="first_name" required pattern="[A-Za-z]+" placeholder="Your first name"><br>
+        Last Name: <input type="text" name="last_name" required pattern="[A-Za-z]+" placeholder="Your last name"><br>
         Project Title: <input type="text" name="project_title" required placeholder="Your project name"><br>
         Email: <input type="email" name="email" required placeholder="example@domain.com"><br>
-        Phone (999-999-9999): <input type="text" name="phone" pattern="\d{3}-\d{3}-\d{4}" required placeholder="Format: 999-999-9999"><br>
+        Phone: <input type="text" name="phone" pattern="\d{3}-\d{3}-\d{4}" required placeholder="Format: 999-999-9999"><br>
         Time Slot: 
         <select name="slot_id" required>
             <?php foreach ($slots as $slot): ?>
