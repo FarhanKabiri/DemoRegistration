@@ -11,6 +11,11 @@
     <div class="theme-toggle">
   <button onclick="toggleTheme()" id="theme-icon" title="Toggle Theme">🌙</button>
 </div>
+<div class="welcome-ribbon" id="welcomeRibbon">
+    👋 Welcome to Student Registration!
+</div>
+
+
 
     <p><a href="students.php">View Registered Students</a></p>
     <h2>Student Registration</h2>

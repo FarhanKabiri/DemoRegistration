@@ -171,10 +171,61 @@ tr:hover {
     transition: background-color 0.2s ease-in-out;
 }
 
-form {
+.success-container {
+    text-align: center;
+    margin-top: 100px;
+    animation: fadeInPop 0.6s ease;
+}
+
+.checkmark {
+    font-size: 60px;
+    animation: popIn 0.5s ease forwards;
+}
+
+.success-text {
+    font-size: 28px;
+    margin-top: 20px;
+    animation: slideUp 0.6s ease forwards;
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeSlideUp 0.6s ease-out forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInPop {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 0.6s ease forwards;
 }
 
 @keyframes fadeSlideUp {
@@ -184,43 +235,77 @@ form {
     }
 }
 
-input, select {
-    position: relative;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, select:focus {
+input:focus,
+select:focus {
     border-color: var(--accent-color);
-    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+    box-shadow: 0 0 6px rgba(40, 167, 69, 0.3);
+}
+.pop-in {
+    animation: popIn 0.4s ease forwards;
 }
 
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+input[type="submit"]:active,
+.theme-toggle button:active {
+    transform: scale(0.96);
+    transition: transform 0.1s ease;
+}
 
 tr:hover {
     background-color: var(--hover-bg);
     transform: scale(1.01);
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
-
-.success-container {
-    animation: fadeInPop 0.7s ease;
-}
-
-@keyframes fadeInPop {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 .theme-toggle button:active {
-    animation: spin 0.4s ease;
+    animation: spin 0.4s linear;
 }
 
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+.welcome-ribbon {
+    position: fixed;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 99;
+    animation: slideDownFade 4s ease forwards;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide down and fade */
+@keyframes slideDownFade {
+    0% {
+        top: -60px;
+        opacity: 0;
+    }
+    10% {
+        top: 0;
+        opacity: 1;
+    }
+    85% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: -60px;
+        opacity: 0;
+    }
 }
